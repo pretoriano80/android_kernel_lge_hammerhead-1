@@ -1,32 +1,290 @@
 set_progress(0.0);
 ui_print("");
 ui_print("Installing Sooplus...");
-
 set_progress(0.1);
+
+if
+   file_getprop("/tmp/aroma/gest.prop","item.1.1") == "1"
+     then
+   ui_print("Enabled sweep to right");
+endif;
+if
+   file_getprop("/tmp/aroma/gest.prop","item.1.2") == "1"
+     then
+   ui_print("Enabled sweep to left");
+endif;
+if
+   file_getprop("/tmp/aroma/gest.prop","item.1.3") == "1"
+     then
+   ui_print("Enabled sweep up to wake");
+endif;
+if
+   file_getprop("/tmp/aroma/gest.prop","item.1.4") == "1"
+     then
+   ui_print("Enabled sweep down to wake");
+endif;
+
+if
+   file_getprop("/tmp/aroma/gest.prop","item.2.2") == "1"
+     then
+   ui_print("Power Key Toggles S2W/DT2W enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/s2s.prop","selected.0") == "2"
+     then
+   ui_print("Enabled sweep2sleep right");
+endif;
+
+if
+   file_getprop("/tmp/aroma/s2s.prop","selected.0") == "3"
+     then
+   ui_print("Enabled sweep2sleep left");
+endif;
+
+if
+   file_getprop("/tmp/aroma/s2s.prop","selected.0") == "4"
+     then
+   ui_print("Enabled sweep2sleep right & left");
+endif;
+
+if
+   file_getprop("/tmp/aroma/mods.prop","item.0.1") == "1"
+     then
+   ui_print("Enabled USB Fastcharge");
+endif;
+
+if
+   file_getprop("/tmp/aroma/mods.prop","item.0.2") == "1"
+     then
+   ui_print("Enabled multicore power saving");
+endif;
+
+if
+   file_getprop("/tmp/aroma/mods.prop","item.0.3") == "1"
+     then
+   ui_print("Enabled backlight dimmer");
+endif;
+
+if
+   file_getprop("/tmp/aroma/mods.prop","item.0.4") == "1"
+     then
+   ui_print("Disabled logcat");
+endif;
+
+if
+   file_getprop("/tmp/aroma/power.prop","selected.0") == "1"
+     then
+   ui_print("Power suspend driver AUTOSLEEP enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/power.prop","selected.0") == "2"
+     then
+   ui_print("Power suspend driver USERSPACE enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/power.prop","selected.0") == "3"
+     then
+   ui_print("Power suspend driver LCD_PANEL enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/power.prop","selected.0") == "4"
+     then
+   ui_print("Power suspend driver HYBRID enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/cpu.prop","selected.0") == "1"
+     then
+   ui_print("CPU Governor ondemand enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/cpu.prop","selected.0") == "2"
+     then
+   ui_print("CPU Governor interactive enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/cpu.prop","selected.0") == "3"
+     then
+   ui_print("CPU Governor sooplus enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/cpu.prop","selected.0") == "4"
+     then
+   ui_print("CPU Governor smartmax enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/cpu.prop","selected.0") == "5"
+     then
+   ui_print("CPU Governor zzmoove enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/cpu.prop","selected.0") == "6"
+     then
+   ui_print("CPU Governor intellimm enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/cpu.prop","selected.0") == "7"
+     then
+   ui_print("CPU Governor yankactive enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.1") == "1"
+     then
+   ui_print("I/O scheduler CFQ enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.1") == "2"
+     then
+   ui_print("I/O scheduler ROW enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.1") == "3"
+     then
+   ui_print("I/O scheduler DEADLINE enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.1") == "4"
+     then
+   ui_print("I/O scheduler FIOPS enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.1") == "5"
+     then
+   ui_print("I/O scheduler SIO enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.1") == "6"
+     then
+   ui_print("I/O scheduler BFQ enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.2") == "1"
+     then
+   ui_print("READAHEAD=128 enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.2") == "2"
+     then
+   ui_print("READAHEAD=256 enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.2") == "3"
+     then
+   ui_print("READAHEAD=512 enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/disk.prop","selected.2") == "4"
+     then
+   ui_print("READAHEAD=1024 enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.1") == "1"
+     then
+   ui_print("Sound settings stock enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.1") == "2"
+     then
+   ui_print("Faux Sound settings QUALITY enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.1") == "3"
+     then
+   ui_print("Faux Sound settings LOUDNESS enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.1") == "4"
+     then
+   ui_print("Faux Sound settings QUIET enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.2") == "1"
+     then
+   ui_print("Gamma settings stock enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.2") == "2"
+     then
+   ui_print("Gamma settings Neriamarillo v3 enabled ");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.2") == "3"
+     then
+   ui_print("Gamma settings Yorici Calibrated Punch enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/misc.prop","selected.2") == "4"
+     then
+   ui_print("Gamma settings Piereligio True RGB v7 enabled");
+endif;
+
+if
+   file_getprop("/tmp/aroma/blx.prop","selected.0") == "1"
+     then
+   ui_print("Battery charge limit enabled up to: 96%");
+endif;
+
+if
+   file_getprop("/tmp/aroma/blx.prop","selected.0") == "2"
+     then
+   ui_print("Battery charge limit enabled up to: 97%");
+endif;
+
+if
+   file_getprop("/tmp/aroma/blx.prop","selected.0") == "3"
+     then
+   ui_print("Battery charge limit enabled up to: 98%");
+endif;
+
+if
+   file_getprop("/tmp/aroma/blx.prop","selected.0") == "4"
+     then
+   ui_print("Battery charge limit enabled up to: 99%");
+endif;
+
+if
+   file_getprop("/tmp/aroma/blx.prop","selected.0") == "5"
+     then
+   ui_print("Battery charge limit enabled up to: 100%");
+endif;
 
 package_extract_dir("utils", "/tmp");
 package_extract_dir("backup_files", "/tmp");
 set_perm(0, 0, 0777, "/tmp/backupkernel.sh");
-
-set_progress(0.3);
-
-if
-   file_getprop("/tmp/aroma/bak.prop","item.0.1") == "1"
-     then
-   ui_print("backup current Kernel to /data/media/0/Kernel_backup/Pre_sooplus_kernel_restore.zip");
-   run_program("/tmp/backupkernel.sh");
-endif;
-
-set_progress(0.4);
-
-package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
-
+set_perm(0, 0, 0777, "/tmp/buildconfig.sh");
+set_progress(0.2);
 ui_print("Mounting /system");
 #mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
 run_program("/sbin/busybox", "mount", "/system");
-
-set_progress(0.5);
-
+set_progress(0.3);
 ui_print("Cleaning up");
 delete("/data/.bootcheck");
 delete("/data/.frandom");
@@ -200,31 +458,30 @@ delete_recursive("/system/etc/entropy");
 delete_recursive("/system/etc/rngd");
 delete_recursive("/system/lib/modules");
 delete_recursive("/system/etc/sooplus.conf");
-
-set_progress(0.6);
-
+set_progress(0.4);
 ui_print("Installing system files");
 package_extract_dir("system", "/system");
-
-set_progress(0.7);
-
-set_perm(0, 0, 0777, "/tmp/buildconfig.sh");
+set_progress(0.5);
 run_program("/tmp/buildconfig.sh");
 run_program("/sbin/busybox", "cp", "/tmp/sooplus.conf", "/system/etc/sooplus.conf");
-
-set_progress(0.8);
-
+set_progress(0.6);
 set_perm_recursive(0, 0, 0644, 0644, "/system/lib/modules");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/bin/fstrim");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/xbin/7za");
 #set_perm_recursive(0, 0, 0644, 0644, "/system/etc/thermal-engine-8974.conf");
 #set_perm_recursive(0, 2000, 0755, 0755, "/system/bin/mpdecision");
 #set_perm_recursive(0, 2000, 0755, 0755, "/system/bin/thermal-engine-hh");
-
-set_progress(0.9);
- 
+set_progress(0.7);
+if
+   file_getprop("/tmp/aroma/bak.prop","item.0.1") == "1"
+     then
+   ui_print("backup current Kernel to /data/media/0/Kernel_backup/Pre_sooplus_kernel_restore.zip");
+   run_program("/tmp/backupkernel.sh");
+endif;
+package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+set_progress(0.8);
 unmount("/system");
-
+set_progress(0.9);
 ui_print("");
 ui_print("");
 set_progress(1.0);

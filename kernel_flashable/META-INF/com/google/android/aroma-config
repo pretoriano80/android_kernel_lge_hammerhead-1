@@ -192,6 +192,15 @@ selectbox(
   "HYBRID","",0
 );
 
+selectbox(
+  "Battery life extender","<b>This will set battery charging limit to below selected</b>","","blx.prop",
+  "96%","",0,
+  "97%","",1,
+  "98%","",0,
+  "99%","",0,
+  "100%","",0
+);
+
 checkbox(
   "Kernel backup","<b>Select to backup current kernel to flashable zip</b>","@personalize","bak.prop",
   "Backup current kernel","",1
