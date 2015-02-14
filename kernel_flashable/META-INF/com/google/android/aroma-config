@@ -188,7 +188,8 @@ checkbox(
   "multicore power saving","this will group task into least possible cores",0,
   "Backlight dimmer","Allows reduced screen brightness",0,
   "Disable Logcat","",0,
-  "Sooplus","Slight boost to L2 cache and bus bandwidth.",0
+  "Sooplus","Slight boost to L2 cache and bus bandwidth.",0,
+  "GPU Governor","Select to enable simple GPU governor. Default is ondemand.",0
 );
 
 selectbox(

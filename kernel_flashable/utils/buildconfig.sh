@@ -145,6 +145,16 @@ else
   echo "LC=1" >> $CONFIGFILE;
 fi
 
+#GPU Governor
+GPU=`grep "item.0.6" /tmp/aroma/mods.prop | cut -d '=' -f2`
+echo -e "\n\n##### GPU Governor Settings #####\n# 0 to enable ondemand GPU Governor" >> $CONFIGFILE
+echo -e "# 1 to enable simple GPU governor\n" >> $CONFIGFILE
+if [ $GPU = 1 ]; then
+  echo "GPU=1" >> $CONFIGFILE;
+else
+  echo "GPU=0" >> $CONFIGFILE;
+fi
+
 #Power suspend
 PWR=`grep selected.0 /tmp/aroma/power.prop | cut -d '=' -f2`
 echo -e "\n\n##### Power suspend settings #####\n# 0 for AUTOSLEEP" >> $CONFIGFILE
