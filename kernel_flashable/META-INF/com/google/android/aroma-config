@@ -73,6 +73,23 @@ alert(
 );
 
 selectbox(
+  "Maximum CPU Frequency","<b>Select maximum CPU frequency.</b>\n Stock is recommended.","@info","freq0.prop",
+  "1498MHz","",0,
+  "1728MHz","",0,
+  "1958MHz","",0,
+  "2266MHz","(stock)",1,
+  "2342MHz","",0,
+  "2419MHz","",0,
+  "2496MHz","",0,
+  "2573MHz","",0,
+  "2650MHz","",0,
+  "2726MHz","",0,
+  "2803MHz","",0,
+  "2880MHz","",0,
+  "2957MHz","",0
+);
+
+selectbox(
   "Sweep2Wake and DoubleTap2Wake","Enabling S2W or DT2W will cause battery drain. This can be minimized with the \"Power button toggles S2W/DT2W\" option, which temporarily disables S2W/DT2W, or by enabling \"S2W/DT2W timeout\"","","wg.prop",
 
   "S2W/DT2W","S2W/DT2W wake screen",0,
@@ -170,7 +187,8 @@ checkbox(
   "Enable USB fastcharge","",0,
   "multicore power saving","this will group task into least possible cores",0,
   "Backlight dimmer","Allows reduced screen brightness",0,
-  "Disable Logcat","",0
+  "Disable Logcat","",0,
+  "Sooplus","Slight boost to L2 cache and bus bandwidth.",0
 );
 
 selectbox(
@@ -195,7 +213,7 @@ selectbox(
 selectbox(
   "Battery life extender","<b>This will set battery charging limit to below selected</b>","","blx.prop",
   "96%","",0,
-  "97%","",1,
+  "97%","",0,
   "98%","",0,
   "99%","",0,
   "100%","",0

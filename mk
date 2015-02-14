@@ -7,6 +7,7 @@ BASE_KER_VER=$MONTH.$DAY
 CODENAME="hammerhead"
 AUTHOR="soorajj"
 OUT_DIR=./kernel_flashable
+IMG_OUT_DIR=./kernel_flashable/boot_image
 TOOLCHAIN_DIR=~/android/toolchain/arm-cortex_a15-linux-gnueabihf-linaro_4.9.3-2015.01/bin/arm-cortex_a15-linux-gnueabihf-
 INITRAMFS_TMP=./initramfs
 INITRAMFS_SOURCE=~/android/ramdisk/
@@ -68,8 +69,9 @@ cp arch/arm/boot/zImage-dtb zImage
 
 echo "making boot.img"
 ./utils/mkbootimg --kernel zImage --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 msm_watchdog_v2.enable=1 androidboot.selinux=permissive' --base 0x00000000 --pagesize 2048 --ramdisk_offset 0x02900000 --tags_offset 0x02700000 --ramdisk ramdisk.gz --output boot.img
-echo "copying boot.img to $OUT_DIR..."
-cp boot.img $OUT_DIR
+echo "copying boot.img to $IMG_OUT_DIR..."
+mkdir -p $IMG_OUT_DIR
+cp boot.img $IMG_OUT_DIR
 echo "[BUILD]: Changing aroma version/data/device to: $ARCHIVE_FILE...";
 sed -i "/ini_set(\"rom_name\",/c\ini_set(\"rom_name\", \""$KER_NAME"\");" $OUT_DIR/META-INF/com/google/android/aroma-config
 sed -i "/ini_set(\"rom_version\",/c\ini_set(\"rom_version\", \""$BASE_KER_VER"\");" $OUT_DIR/META-INF/com/google/android/aroma-config

@@ -171,7 +171,7 @@ elif [ "$BLX" = 4 ]; then
   echo "BLX=3" >> $CONFIGFILE;
 elif [ "$BLX" = 5 ]; then
   echo "BLX=4" >> $CONFIGFILE;
-else
+elif [ "$BLX" = 1 ]; then
   echo "BLX=0" >> $CONFIGFILE;
 fi
 
