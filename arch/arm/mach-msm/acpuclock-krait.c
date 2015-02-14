@@ -1079,7 +1079,7 @@ ssize_t acpuclk_get_vdd_levels_str(char *buf)
     
 	if (buf) {
 		for (i = 0; drv.acpu_freq_tbl[i].speed.khz; i++) {
-            if (drv.acpu_freq_tbl[i].use_for_scaling) {
+            if (drv.acpu_freq_tbl[i].speed.khz <= arg_max_oc0) {
                 len += sprintf(buf + len, "%lumhz: %i mV\n",
                            drv.acpu_freq_tbl[i].speed.khz/1000,
                            drv.acpu_freq_tbl[i].vdd_core/1000 );
